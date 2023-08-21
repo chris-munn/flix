@@ -1,0 +1,139 @@
+@import-normalize;
+
+/* html,
+body{
+  height: 100%;
+  width: 100%;
+} */
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+  color: #ffffff;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  padding: 160px 20px 0px;
+}
+
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 140px;
+  background-color: black;
+  z-index: 2;
+  border-bottom: 2px solid #ffffff;
+  display: flex;
+}
+
+.logo {
+  padding: 10px 0px 0px 30px
+}
+
+.strapLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  padding-right: 30px;
+  font-size: 28px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: right;
+  font-style: italic;
+}
+
+.movieList {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.movieList > div {
+  width: calc(25% - 30px);
+  box-sizing: border-box;
+}
+
+.movieItem a {
+  color: #ffffff;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.movieItem a .shortDesc {
+  display: none;
+  animation: fadeIn 2.5s; 
+}
+
+.movieItem a:hover .title,
+.movieItem a:hover .seconds {
+  display: none;
+}
+
+.movieItem a:hover .shortDesc {
+  display: block;
+}
+
+.movieItem img {
+  width: 100%;
+}
+
+picture {
+  display: block;
+}
+
+.details {
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  right: 10px;
+  z-index: 2;
+}
+
+.details .title {
+  font-size: 20px;
+  display: block;
+  padding-bottom: 7px;
+}
+
+.details .seconds {
+  font-size: 12px;
+  display: block;
+}
+
+.movieItem {
+  position: relative;
+  margin: 15px;
+}
+
+.movieItem a:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 50%, black 95%);
+}
+
+h1 {
+  margin: 0px;
+  padding: 10px 0 20px 15px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
